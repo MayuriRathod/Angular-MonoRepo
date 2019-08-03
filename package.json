@@ -7,10 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "build-lib": "cd projects/shared && yarn build",
     "e2e": "ng e2e"
   },
   "workspaces": [
-    "packages/*"
+    "projects/*"
   ],
   "private": true,
   "dependencies": {

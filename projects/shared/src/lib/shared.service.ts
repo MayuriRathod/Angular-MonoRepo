@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SharedService {
 
   constructor() { }
+
+  public dummyFunction() {
+    console.log("function working")
+  }
 }

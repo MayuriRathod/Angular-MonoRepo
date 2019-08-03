@@ -1,11 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "packages",
+  "newProjectRoot": "projects",
   "projects": {
     "app-one": {
-      "root": "packages/app-one/",
-      "sourceRoot": "packages/app-one/src",
+      "root": "projects/app-one/",
+      "sourceRoot": "projects/app-one/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -14,16 +14,16 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/app-one",
-            "index": "packages/app-one/src/index.html",
-            "main": "packages/app-one/src/main.ts",
-            "polyfills": "packages/app-one/src/polyfills.ts",
-            "tsConfig": "packages/app-one/tsconfig.app.json",
+            "index": "projects/app-one/src/index.html",
+            "main": "projects/app-one/src/main.ts",
+            "polyfills": "projects/app-one/src/polyfills.ts",
+            "tsConfig": "projects/app-one/tsconfig.app.json",
             "assets": [
-              "packages/app-one/src/favicon.ico",
-              "packages/app-one/src/assets"
+              "projects/app-one/src/favicon.ico",
+              "projects/app-one/src/assets"
             ],
             "styles": [
-              "packages/app-one/src/styles.css"
+              "projects/app-one/src/styles.css"
             ],
             "scripts": []
           },
@@ -31,8 +31,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "packages/app-one/src/environments/environment.ts",
-                  "with": "packages/app-one/src/environments/environment.prod.ts"
+                  "replace": "projects/app-one/src/environments/environment.ts",
+                  "with": "projects/app-one/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -74,17 +74,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "packages/app-one/src/test.ts",
-            "polyfills": "packages/app-one/src/polyfills.ts",
-            "tsConfig": "packages/app-one/tsconfig.spec.json",
-            "karmaConfig": "packages/app-one/karma.conf.js",
+            "main": "projects/app-one/src/test.ts",
+            "polyfills": "projects/app-one/src/polyfills.ts",
+            "tsConfig": "projects/app-one/tsconfig.spec.json",
+            "karmaConfig": "projects/app-one/karma.conf.js",
             "styles": [
-              "packages/app-one/src/styles.css"
+              "projects/app-one/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "packages/app-one/src/favicon.ico",
-              "packages/app-one/src/assets"
+              "projects/app-one/src/favicon.ico",
+              "projects/app-one/src/assets"
             ]
           }
         },
@@ -92,8 +92,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "packages/app-one/tsconfig.app.json",
-              "packages/app-one/tsconfig.spec.json"
+              "projects/app-one/tsconfig.app.json",
+              "projects/app-one/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -103,32 +103,32 @@
       }
     },
     "shared": {
-      "root": "packages/shared",
-      "sourceRoot": "packages/shared/src",
+      "root": "projects/shared",
+      "sourceRoot": "projects/shared/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "packages/shared/tsconfig.lib.json",
-            "project": "packages/shared/ng-package.json"
+            "tsConfig": "projects/shared/tsconfig.lib.json",
+            "project": "projects/shared/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "packages/shared/src/test.ts",
-            "tsConfig": "packages/shared/tsconfig.spec.json",
-            "karmaConfig": "packages/shared/karma.conf.js"
+            "main": "projects/shared/src/test.ts",
+            "tsConfig": "projects/shared/tsconfig.spec.json",
+            "karmaConfig": "projects/shared/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "packages/shared/tsconfig.lib.json",
-              "packages/shared/tsconfig.spec.json"
+              "projects/shared/tsconfig.lib.json",
+              "projects/shared/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
