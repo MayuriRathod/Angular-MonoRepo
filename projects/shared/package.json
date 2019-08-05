@@ -2,6 +2,9 @@
   "name": "shared",
   "version": "0.0.1",
   "scripts": {
+    "start": "ng serve",
+    "test": "ng test",
+    "lint": "ng lint",
     "build": "ng-packagr -p package.json"
   },
   "peerDependencies": {

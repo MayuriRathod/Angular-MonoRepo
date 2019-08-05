@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "build-lib": "cd projects/shared && yarn build",
+    "start": "lerna run start --scope=app-one --stream",
+    "build": "lerna run build --scope=app-one,shared --stream",
+    "test": "lerna run test --scope=app-one,shared --stream",
+    "lint": "lerna run lint --scope=app-one,shared --stream",
+    "build-lib": "lerna run build --scope=shared",
     "e2e": "ng e2e"
   },
   "workspaces": [
